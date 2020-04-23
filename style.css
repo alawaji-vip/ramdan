@@ -13,7 +13,7 @@
 
 .logo{
     background-image: 
-        url('../logo.jpg');
+        url('logo.jpg');
     min-width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
