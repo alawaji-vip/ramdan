@@ -32,8 +32,6 @@
 <input type="text" id="fname" name="fname"><br>
 <button onclick="myFunction()">إنشاء البطاقة</button> <br>
 
-                    <a href="#" class="button" id="btn-download">تحميل الصورة</a>
-
 
 <canvas id="myCanvas"  height ="640" width= "640" style="border:1px solid #d3d3d3; display:none">
 Your browser does not support the HTML5 canvas tag.
@@ -60,7 +58,10 @@ function myFunction(){
      context.fillText(name, 440, 600);
      // open the image in a new browser tab
      // the user can right-click and save that image
-    
+     
+    var img    = canvas.toDataURL("image/png");
+document.write('<img src="'+img+'"/>');
+
      win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
 
      
