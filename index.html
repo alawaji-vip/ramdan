@@ -49,37 +49,23 @@ function myFunction(){
  var imageObj = new Image();
  imageObj.onload = function(){
      context.drawImage(imageObj, 10, 10);
-     context.font = "30px Calibri";
+     context.font = "35px Calibri";
  //    context.fillStyle = "black";
      var name = document.getElementById('fname').value
      var  length= name.length;
      
      name = name.padStart(15);
-     context.fillText(name, 440, 600);
+     context.fillText(name, 240, 600);
      // open the image in a new browser tab
      // the user can right-click and save that image
-      var MIME_TYPE = "image/png";
+     var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 
-    var imgURL = canvas.toDataURL(MIME_TYPE);
-    var dlLink = document.createElement('a');
-    dlLink.download = fileName;
-    dlLink.href = imgURL;
-    dlLink.dataset.downloadurl = [MIME_TYPE, dlLink.download, dlLink.href].join(':');
 
-    document.body.appendChild(dlLink);
-    dlLink.click();
-    document.body.removeChild(dlLink);
- imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
-
-     win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
-
-     
+window.location.href=image; // it will save locally
  };
-    
-};
-    
-  
-});
+ imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
+     
+    };
 </script>
                 </div>
             </div>
