@@ -1,0 +1,134 @@
+/* style.css */
+
+.header{
+    //height: 50px;
+    background-color: #ُُُ;
+}
+
+.header .container{
+    //height: 100%;
+    padding: 5px;
+  
+}
+
+.logo{
+    background-image: 
+        url('../imgs/logo.png');
+    min-width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    height: 100px;
+}
+
+.app_name{
+    line-height: 50px;
+    margin: 0 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.content{
+    background-color: #FFF;
+    border-radius: 20px 20px 0 0;
+}
+
+.content .container{
+    padding: 20px 10px;
+}
+
+.content #title{
+    text-align: center;
+    padding: 0px 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #000000;
+    
+}
+
+.content #form{
+    max-width: 380px;
+    margin: 15px auto;
+    min-height: 200px;
+    background-color: #FFF;
+    box-shadow: 
+        0 0 0px 0 rgba(0, 0, 0, .3);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.occasion{
+    background-image: 
+        url('../imgs/occasion.png');
+    min-width: 130px;
+    min-height: 130px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.content #form label{
+    font-weight: 500;
+    color: gray;
+}
+
+.content #form input{
+    display: block;
+    height: 35px;
+    padding: 0 10px;
+    width: 100%;
+    border: .5px solid rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.content #form input[type=submit]{
+    font-weight: 600;
+    font-size: 15px;
+    -webkit-appearance: none;
+    background-color: #000;
+    color: #FFF;
+    line-height: 30px;
+    padding-top: 3px
+}
+
+.content #form #nameField{
+    margin-top: 5px;
+}
+
+.content .logo{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    opacity: .4;
+    cursor: default;
+    margin-top: -50px;
+    filter: blur
+}
+
+.msgs{
+    text-align: center;
+    padding: 10px;
+}
+
+.error{
+    text-align: center;
+}
+
+@media (min-width: 800px){
+    .content{
+        border-radius: 0;
+    }
+    
+    .content #form{
+        box-shadow: 
+            0 0 7px 0 rgba(0,0,0,.1)
+    }
+    
+    .content .container{
+        height: calc(100vh - 50px);
+        background-color: rgba(0,0,0,.01)
+    }
+}

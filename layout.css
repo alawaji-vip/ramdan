@@ -1,0 +1,28 @@
+/* layout.css */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+.wrapper{
+    height: 100%;
+    cursor: default;
+    background-color: #EEE;
+}
+
+.container{
+    max-width: 780px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+input:focus{
+    outline: none;
+}
