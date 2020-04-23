@@ -32,6 +32,8 @@
 <input type="text" id="fname" name="fname"><br>
 <button onclick="myFunction()">إنشاء البطاقة</button> <br>
 
+                    <a href="#" class="button" id="btn-download">تحميل الصورة</a>
+
 
 <canvas id="myCanvas"  height ="640" width= "640" style="border:1px solid #d3d3d3; display:none">
 Your browser does not support the HTML5 canvas tag.
@@ -49,7 +51,7 @@ function myFunction(){
  var imageObj = new Image();
  imageObj.onload = function(){
      context.drawImage(imageObj, 10, 10);
-     context.font = "35px Calibri";
+     context.font = "30px Calibri";
  //    context.fillStyle = "black";
      var name = document.getElementById('fname').value
      var  length= name.length;
@@ -60,7 +62,12 @@ function myFunction(){
      // the user can right-click and save that image
     
      win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
-
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
+     
  };
  imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
 };
