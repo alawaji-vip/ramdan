@@ -62,15 +62,17 @@ function myFunction(){
      // the user can right-click and save that image
     
      win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
-var button = document.getElementById('btn-download');
-button.addEventListener('click', function (e) {
-    var dataURL = canvas.toDataURL('image/png');
-    button.href = dataURL;
-});
+
      
  };
  imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
 };
+    
+    var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
 </script>
                 </div>
             </div>
