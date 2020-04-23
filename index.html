@@ -58,13 +58,7 @@ function myFunction(){
      context.fillText(name, 440, 600);
      // open the image in a new browser tab
      // the user can right-click and save that image
-
-
-     win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
-
-     
- };
-          var MIME_TYPE = "image/png";
+      var MIME_TYPE = "image/png";
 
     var imgURL = canvas.toDataURL(MIME_TYPE);
     var dlLink = document.createElement('a');
@@ -76,12 +70,15 @@ function myFunction(){
     dlLink.click();
     document.body.removeChild(dlLink);
  imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
+
+     win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
+
+     
+ };
+    
 };
     
-    var button = document.getElementById('btn-download');
-button.addEventListener('click', function (e) {
-    var dataURL = canvas.toDataURL('image/png');
-    button.href = dataURL;
+  
 });
 </script>
                 </div>
