@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="assets/css/layout.css">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/png" href="assets/imgs/logo.png" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal:400,500,700,900&amp;subset=arabic" rel="stylesheet"> 
+        <title>النادي السعودي بمدينة شفيلد</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- رأس الصفحة Header -->
+            <div class="header">
+                <div class="container">
+                    <div class="logo" title="  النادي السعودي في مدينة شفيلد"></div>
+                    <!-- <div class="app_name"></div> -->
+                </div>
+            </div>
+            <!-- محتوى الصفحة Content -->
+            <div class="content">
+                <div class="container">
+                    <!-- شعار المناسبة  -->
+                    <!-- <div class="occasion"></div> -->
+                    <!-- عنوان الصفجة Title -->
+                    <img id="scream" height="277" style="border:1px solid #d3d3d3; display:none"  src="https://i.ibb.co/0jdm18g/ramadan.jpg" alt="The Scream">
+
+<p>بطاقة تهنئة خاصة باسمك لشهر رمضان المبارك 1441 هـ مقدمة من النادي السعودي بمدينة شفيلد </p>
+<label for="fname">الاسم:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<button onclick="myFunction()">إنشاء البطاقة</button> <br>
+
+
+<canvas id="myCanvas"  height ="640" width= "640" style="border:1px solid #d3d3d3; display:none">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+function myFunction(){
+
+  
+  
+ var canvas = document.getElementById("myCanvas");
+ if (canvas.style.display === "none") {
+    canvas.style.display = "block";
+  } 
+ var context = canvas.getContext("2d");
+ var imageObj = new Image();
+ imageObj.onload = function(){
+     context.drawImage(imageObj, 10, 10);
+     context.font = "35px Calibri";
+ //    context.fillStyle = "black";
+     var name = document.getElementById('fname').value
+     var  length= name.length;
+     
+     name = name.padStart(15);
+     context.fillText(name, 240, 600);
+     // open the image in a new browser tab
+     // the user can right-click and save that image
+    
+     win.document.write("<img src='"+canvas.toDataURL()+"'/>");    
+
+ };
+ imageObj.src = "https://i.ibb.co/0jdm18g/ramadan.jpg"; 
+};
+</script>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
