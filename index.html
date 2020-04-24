@@ -11,13 +11,13 @@ function draw() {
     var imageObj = new Image();
   imageObj.src = "pic_the_scream.jpg"; 
    ctx.drawImage(imageObj, 0, 0);
-   ctx.font = "32px Tajawal";
+   ctx.font = "28px Tajawal";
     ctx.fillStyle = "#535156";
     var name = document.getElementById('fname').value
    var  length= name.length;
      
      name = name.padStart(15);
-     ctx.fillText(name, 450, 580); 
+     ctx.fillText(name, 400, 580); 
      downloadImage();
 };
 
@@ -49,7 +49,7 @@ function draw() {
                     <!-- عنوان الصفجة Title -->
                     <img id="scream" height="2" style="border:1px solid #d3d3d3; visibility:'hidden'"  src="pic_the_scream.jpg" alt="The Scream">
 
-<p>بطاقة تهنئة خاصة باسمك لشهر رمضان المبارك 1441 هـ مقدمة من النادي السعودي بمدينة شفيلد ااا </p>
+<p>بطاقة تهنئة خاصة باسمك لشهر رمضان المبارك 1441 هـ مقدمة من النادي السعودي بمدينة شفيلد تتتت </p>
 <label for="fname">الاسم:</label><br>
 <input type="text" id="fname" name="fname"><br>
 <div><button onclick="draw()">إنشاء البطاقة</button></div>
