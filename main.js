@@ -8,4 +8,3 @@ logo.onclick = () => {
     window.location.replace('#');
 }
 
-name.autocomplete = 'off'
